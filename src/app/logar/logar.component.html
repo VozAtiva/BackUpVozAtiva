@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!--<div class="container-fluid">
 
   <div class="row d-flex align-items-center">
   
@@ -40,4 +40,42 @@
   </div>
   
   
+  </div> -->
+  
+  
+  
+  <div class="background">
+    
+    
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+<form>
+    <h3>Login</h3>
+
+    
+
+    
+      <label for="usuario">Usuário</label>
+      <input [(ngModel)]='usuarioLogin.usuario' type="text" name="usuario" id="usuario" placeholder="Seu usuário (email)">
+  
+
+
+  
+      <label for="senha">Senha</label>
+      <input  [(ngModel)]='usuarioLogin.senha' type="password" name="senha" id="senha" placeholder="Sua senha">
+ 
+
+    
+  <div class="d-flex justify-content-center">
+    <button type="submit" class="btn btn-success" (click)='logar()'>Logar</button>
   </div>
+   
+  <hr class="mt-5 mb-5">
+
+                  <p class="text-center">
+                      Não tem uma conta? <a href="" routerLink="/cadastrar" >Cadastre-se</a>
+                  </p>
+ 
+</form>
+

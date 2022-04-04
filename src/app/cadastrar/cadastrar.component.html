@@ -1,67 +1,90 @@
-<div class="background">
-  <div class="container">
-    <div class="screen">
-      <div class="screen-header">
-        <div class="screen-header-left">
-          <div class="screen-header-button close"></div>
-          <div class="screen-header-button maximize"></div>
-          <div class="screen-header-button minimize"></div>
-        </div>
-        <div class="screen-header-right">
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
-        </div>
-      </div>
-      <div class="screen-body">
-        <div class="screen-body-item left">
-          <div class="app-title">
-            <span>CADASTRO</span>
-          </div>
-          <div class="app-contact">Informações de Contato : +62 81 314 928 595</div>
-        </div>
-        <div class="screen-body-item">
-          <div class="app-form">
-            <div class="app-form-group">
-              <input [(ngModel)]='usuarioModel.nome' class="app-form-control" placeholder="Digite seu nome Completo">
-            </div>
-            <div class="app-form-group">
-              <input [(ngModel)]='usuarioModel.usuario' class="app-form-control" placeholder="Digite seu Email">
-            </div>
-            <div class="app-form-group">
-              <input [(ngModel)]='usuarioModel.foto' class="app-form-control" placeholder="Link da Foto">
-            </div>
-            <div class="app-form-group message">
-              <input (input)='confirmSenha($event)' type="password" class="app-form-control" placeholder="Digite sua Senha">
-            </div>
-            <div class="app-form-group message">
-              <input [(ngModel)]='usuarioModel.senha' type="password" placeholder="Confirme sua senha">
-            </div>
-            <div class="app-form-group buttons">
-              <button type="submit" class="btn btn-danger mr-4" routerLink="/logar">Cancelar</button>
-              <button (click)="cadastrarUsuario()" type="submit" class="btn btn-success">Cadastrar</button>
-
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="container" >
+  <a class="links" id="paracadastro"></a>
+  <a class="links" id="paralogin"></a>
+  
+  <div class="content">      
+    <!--FORMULÁRIO DE LOGIN-->
+    <div id="login">
+      <form method="post" action=""> 
+        <h1>Login</h1> 
+        <p> 
+          <label for="email_login">Seu e-mail</label>
+          <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@htmlecsspro.com"/>
+        </p>
+        
+        <p> 
+          <label for="senha_login">Sua senha</label>
+          <input id="senha_login" name="senha_login" required="required" type="password" placeholder="1234" /> 
+        </p>
+        
+        <p> 
+          <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
+          <label for="manterlogado">Manter-me logado</label>
+        </p>
+        
+        <p> 
+          <input type="submit" value="Logar" /> 
+        </p>
+        
+        <p class="link">
+          Ainda não tem conta?
+          <a href="#paracadastro">Cadastre-se</a>
+        </p>
+      </form>
     </div>
-    <div class="credits">
-      inspired by
-      <a class="credits-link" href="https://dribbble.com/shots/2666271-Contact" target="_blank">
-        <svg class="dribbble" viewBox="0 0 200 200">
-          <g stroke="#ffffff" fill="none">
-            <circle cx="100" cy="100" r="90" stroke-width="20"></circle>
-            <path d="M62.737004,13.7923523 C105.08055,51.0454853 135.018754,126.906957 141.768278,182.963345"
-              stroke-width="20"></path>
-            <path d="M10.3787186,87.7261455 C41.7092324,90.9577894 125.850356,86.5317271 163.474536,38.7920951"
-              stroke-width="20"></path>
-            <path d="M41.3611549,163.928627 C62.9207607,117.659048 137.020642,86.7137169 189.041451,107.858103"
-              stroke-width="20"></path>
-          </g>
-        </svg>
-        Gururaj
-      </a>
+
+    <!--FORMULÁRIO DE CADASTRO-->
+    <div id="cadastro">
+      <form method="post" action=""> 
+        <h1>Cadastro</h1> 
+        
+        <p> 
+          <label for="nome_cad">Seu nome</label>
+          <input [(ngModel)]='usuarioModel.nome' id="nome_cad" name="nome_cad" required="required" type="text" placeholder="DEV'S GOAT" />
+        </p>
+        
+        <p> 
+          <label for="email_cad">Seu e-mail</label>
+          <input [(ngModel)]='usuarioModel.usuario' id="email_cad" name="email_cad" required="required" type="email" placeholder="vozativa.generation@gmail.com"/> 
+        </p>
+        
+        <p> 
+          <label for="foto_cad">Link da Foto</label>
+          <input [(ngModel)]='usuarioModel.foto' id="foto_cad" name="foto_cad" required="required" type="text" placeholder="https://i.imgur.com/rAiTvpD.jpg">
+        </p>
+
+        <p> 
+          <label for="senha_cad">Sua senha</label>
+          <input (input)='confirmSenha($event)' id="senha_cad" name="senha_cad" required="required" type="password" placeholder="mínimo 8 dígitos"/>
+        </p>
+        
+        <p> 
+          <label for="senha_cad">Confirme sua senha</label>
+          <input [(ngModel)]='usuarioModel.senha' id="csenha_cad" name="csenha_cad" required="required" type="password" placeholder="Confirmar senha">
+        </p>
+
+        
+        <p> 
+          <input (click)="cadastrarUsuario()" type="submit" class="btn btn-success"  value="Cadastrar"/>
+
+           <!-- <input type="submit" class="btn btn-danger mr-4" routerLink="/logar" value="Cancelar"/>  Implementação do botão cancelar-->
+
+        </p>
+
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-danger mr-4" routerLink='/entrar'>Cancelar</button>
+          <button type="submit" class="btn btn-success" (click)='cadastrarUsuario()' >Cadastrar</button>
+        </div>
+
+        <!-- <button type="submit" class="btn btn-danger mr-4" routerLink="/logar">Cancelar</button> -->
+
+        <!--  <button (click)="cadastrarUsuario()" type="submit" class="btn btn-success">Cadastrar</button> -->
+        
+        <p class="link">  
+          Já tem conta?
+          <a href="/logar"> Voltar para Login </a>
+        </p>
+      </form>
     </div>
   </div>
-</div>
+</div> 
