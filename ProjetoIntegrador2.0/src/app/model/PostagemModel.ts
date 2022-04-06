@@ -1,12 +1,12 @@
 import { UsuarioModel } from './UsuarioModel';
 
-import { Tema } from "./TemaModel";
+import { TemaModel } from "./TemaModel";
 
-export class Postagem{
+export class PostagemModel{
     public id: number;
     public titulo: string;
     public texto: string;
     public imagem: string;
-    public tema: Tema;
+    public tema: TemaModel;
     public usuario: UsuarioModel;
 }

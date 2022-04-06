@@ -1,9 +1,9 @@
-import { Postagem } from "./PostagemModel";
+import { PostagemModel } from "./PostagemModel";
 
-export class Tema{
+export class TemaModel{
     public id: number;
     public descricao: string;
     public tipo: string;
     public tag: string;
-    public postagem: Postagem[];
+    public postagem: PostagemModel[];
 }

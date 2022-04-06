@@ -1,4 +1,4 @@
-import { Postagem } from "./PostagemModel";
+import { PostagemModel } from "./PostagemModel";
 
 export class UsuarioModel{
     public id: number;
@@ -7,5 +7,5 @@ export class UsuarioModel{
     public usuario: string;
     public senha: string;
     public tipo: string;
-    public postagem: Postagem[];
+    public postagem: PostagemModel[];
 }
