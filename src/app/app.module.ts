@@ -11,7 +11,6 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { LogarComponent } from './logar/logar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
-import { TesteComponent } from './teste/teste.component';
 import { AgradecimentosComponent } from './agradecimentos/agradecimentos.component';
 
 @NgModule({
@@ -22,7 +21,6 @@ import { AgradecimentosComponent } from './agradecimentos/agradecimentos.compone
     LogarComponent,
     CadastrarComponent,
     SobrenosComponent,
-    TesteComponent,
     AgradecimentosComponent
   ],
   imports: [
