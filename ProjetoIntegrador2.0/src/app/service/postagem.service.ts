@@ -33,4 +33,12 @@ export class PostagemService {
     return this.http.post<PostagemModel>('http://localhost:8080/postagem', postagem, this.token)
   }
 
+  putPostagem(postagem: PostagemModel): Observable<PostagemModel> {
+    return this.http.put<PostagemModel>('http://localhost:8080/postagem', postagem, this.token)
+  }
+
+  deletePostagem(id: number) {
+    return this.http.delete(`http://localhost:8080/postagem/${id}`, this.token)
+  }
+
 }
