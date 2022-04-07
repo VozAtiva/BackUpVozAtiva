@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AgradecimentosComponent } from './agradecimentos/agradecimentos.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LogarComponent } from './logar/logar.component';
 import { MenuComponent } from './menu/menu.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:'rodape', component: RodapeComponent},
   {path:'cadastrar', component: CadastrarComponent},
   {path:'logar', component: LogarComponent},
-  {path:'sobrenos', component: SobrenosComponent}
+  {path:'sobrenos', component: SobrenosComponent},
+  {path:'agradecimentos', component: AgradecimentosComponent}
 
 ];
 
