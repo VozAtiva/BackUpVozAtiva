@@ -12,6 +12,7 @@ import { LogarComponent } from './logar/logar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { TesteComponent } from './teste/teste.component';
+import { AlertasComponent } from './alertas/alertas.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TesteComponent } from './teste/teste.component';
     LogarComponent,
     CadastrarComponent,
     SobrenosComponent,
-    TesteComponent
+    TesteComponent,
+    AlertasComponent
   ],
   imports: [
     BrowserModule,
