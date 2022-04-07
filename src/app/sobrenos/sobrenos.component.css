@@ -25,7 +25,7 @@ body {
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: row;
 	        flex-direction: row;
-			background-image: linear-gradient(to bottom right, rgb(190, 8, 8), rgb(43, 7, 202)); /* Codigo para mudar fundo da tela */
+			background-color: #c2a5e4c0;
 }
 
 .box {
@@ -47,9 +47,9 @@ body {
 	        box-shadow: 0 0 5px rgba(0,0,0,0.7);
 }
 .box h1 {
-	color: rgb(0, 0, 0);
-	padding: 30px;
-	margin-top: 100px;
+	color: rgb(127, 16, 218);
+	padding-top:  0px;
+	margin-top: 350px;
 	text-align: center;
 	font-weight: 100;
 	font-size: 30px;
@@ -63,7 +63,7 @@ body {
 	width: 60px;
 	height:60px;
 	border-radius: 100px;
-	margin: 200px 50px;
+	margin: 25px 50px;
 	position: absolute;
 }
 
@@ -72,7 +72,7 @@ body {
 	width: 60px;
 	height:60px;
 	border-radius: 100px;
-	margin: 200px 180px;
+	margin: 25px 180px;
 	position: absolute;
 }
 
@@ -311,7 +311,6 @@ body {
 	-webkit-box-shadow: 0 0 20px olive;
 	        box-shadow: 0 0 20px olive;
 }
-
 
 
 
