@@ -9,8 +9,19 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(){
+ }
+ 
+ sair(){
+   this.router.navigate(['/logar'])
+   environment.token = ''
+   environment.foto = ''
+   environment.nome = ''
+   environment.id = 0
+  }
 
 }

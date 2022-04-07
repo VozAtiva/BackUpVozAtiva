@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { LogarComponent } from './logar/logar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { TesteComponent } from './teste/teste.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { TesteComponent } from './teste/teste.component';
     LogarComponent,
     CadastrarComponent,
     SobrenosComponent,
-    TesteComponent
+    TesteComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,10 @@ import { TesteComponent } from './teste/teste.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
